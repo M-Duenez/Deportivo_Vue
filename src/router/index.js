@@ -1,14 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+//import HomeView from '../views/HomeView.vue'
+
+//importaciones componentes
+import Inicio from '../components/Inicio.vue'
+import Estudiantes from '../components/Estudiantes.vue'
+import Club from '../components/Club.vue'
+
+//imoprt vic
+//import Login from '../components/sesion/Login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  /*{
+    path: '/',
+    name: 'login',
+    component: Login
+  },*/
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Inicio',
+    component: Inicio
+  },
+  
+  {
+    path: '/club',
+    name: 'Clubs',
+    component: Club
+  },
+  {
+    path: '/estudiantes',
+    name: 'Estudaintes',
+    component: Estudiantes
   },
   {
     path: '/about',

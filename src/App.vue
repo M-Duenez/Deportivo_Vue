@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
+    <CNavbar ></CNavbar>
+    <br>
+    <br>
+    <!--<nav>
+      <router-link to="/">Home</router-link> 
+      <router-link to="/club">CLUBS</router-link> 
       <router-link to="/about">About</router-link>
-    </nav>
+    </nav>-->
     <router-view/>
   </div>
 </template>
@@ -30,3 +34,19 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>
+import {mapState} from 'vuex';
+import CNavbar from './components/navbar.vue'
+//import CLogin from './components/sesion/Login.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      CNavbar,
+    },
+    computed:{
+      ...mapState(['session'])
+    },
+  }
+</script>
+
